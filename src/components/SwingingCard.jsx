@@ -102,7 +102,7 @@ const SwingingCard = () => {
   };
 
   return (
-    <div className="bg-gray-100 px-4 tablet:px-20 laptop:px-72 desktop:px-96 min-h-screen relative w-full overflow-hidden flex justify-between">
+    <div className="bg-gray-100 px-4 tablet:px-20 laptop:px-72 desktop:px-96 min-h-[80vh] relative w-full overflow-hidden flex justify-between">
       <div
         id="pin"
         className="absolute top-[5px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary rounded-full border-2 border-white shadow-lg z-10"

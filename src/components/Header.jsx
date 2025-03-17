@@ -2,6 +2,9 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
+
+
+
 const Header = () => {
   const name = "JP QUINTANA ".split(""); // Split text into individual characters
 
