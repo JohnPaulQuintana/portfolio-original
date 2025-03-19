@@ -116,7 +116,7 @@ const PortfolioCard = ({ title, image }) => {
   return (
     <div
       ref={containerRef}
-      className="relative w-64 tablet:w-72 h-64 border overflow-hidden"
+      className="relative w-full tablet:w-72 h-64 border overflow-hidden"
     >
       <img src={image} alt={title} className="w-full h-full object-cover" />
       <div ref={overlayRef} className="absolute inset-0"></div>
