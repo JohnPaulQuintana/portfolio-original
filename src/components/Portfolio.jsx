@@ -6,23 +6,51 @@ import { faEye, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 const portfolioItems = [
   {
     id: 1,
-    title: "Project 1",
-    image: "https://themewagon.github.io/meyawo/assets/imgs/folio-1.jpg",
+    title: "Motorsport Growth",
+    image: "/images/mtsport.PNG",
+    url: "https://johnpaulquintana.github.io/ui/",
+    tags: ["UI", "Landing Page"],
+    logo: "/images/MG-LOGO.svg",
   },
   {
     id: 2,
-    title: "Project 2",
-    image: "https://themewagon.github.io/meyawo/assets/imgs/folio-1.jpg",
+    title: "Stage 4 Tuning",
+    image: "/images/s4t.webp",
+    url: "https://pw8j8t-99.myshopify.com/",
+    tags: ["Shopify", "E-commerce"],
+    logo: "/images/S4T-LOGO.png",
   },
   {
     id: 3,
-    title: "Project 3",
-    image: "https://themewagon.github.io/meyawo/assets/imgs/folio-1.jpg",
+    title: "Breakform",
+    image: "/images/breakform.webp",
+    url: "https://c5ejq3rs2w.wpdns.site/",
+    tags: ["Wordpress", "Architecture"],
+    logo: "/images/BR-LOGO.PNG",
   },
   {
     id: 4,
-    title: "Project 4",
-    image: "https://themewagon.github.io/meyawo/assets/imgs/folio-1.jpg",
+    title: "SOFREG SOLUTIONS",
+    image: "/images/sofreg.jpg",
+    url: "https://sofreg-solution-test.netlify.app/",
+    tags: ["React", "Company Website"],
+    logo: "/images/SF-LOGO.png",
+  },
+  {
+    id: 4,
+    title: "Sport Science",
+    image: "/images/sport.PNG",
+    url: "https://sport-science-app.netlify.app/",
+    tags: ["React", "Analytics"],
+    logo: "/images/SF-LOGO.png",
+  },
+  {
+    id: 4,
+    title: "Navigation Kiosk",
+    image: "/images/kiosk.PNG",
+    url: "https://exousianavi.netlify.app/",
+    tags: ["React", "Analytics"],
+    logo: "/images/KIOSK-LOGO.png",
   },
 ];
 
@@ -32,14 +60,21 @@ const Portfolio = () => {
       <h1 className="text-2xl font-bold text-gray-600 mb-5">PORTFOLIO</h1>
       <div className="grid grid-cols-1 tablet:grid-cols-2 gap-4">
         {portfolioItems.map((item) => (
-          <PortfolioCard key={item.id} title={item.title} image={item.image} />
+          <PortfolioCard
+            key={item.id}
+            title={item.title}
+            image={item.image}
+            url={item.url}
+            tags={item.tags}
+            logo={item.logo}
+          />
         ))}
       </div>
     </div>
   );
 };
 
-const PortfolioCard = ({ title, image }) => {
+const PortfolioCard = ({ title, image, url, tags, logo }) => {
   const containerRef = useRef(null);
   const overlayRef = useRef(null);
   const contentRef = useRef(null);
@@ -114,25 +149,45 @@ const PortfolioCard = ({ title, image }) => {
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      className="relative w-full tablet:w-72 h-64 border overflow-hidden"
-    >
-      <img src={image} alt={title} className="w-full h-full object-cover" />
-      <div ref={overlayRef} className="absolute inset-0"></div>
+    <div>
       <div
-        ref={contentRef}
-        className="absolute inset-0 flex flex-col gap-4 items-center justify-center text-white text-lg font-semibold bg-black/50 opacity-0"
+        ref={containerRef}
+        className="relative w-full flex items-center justify-center tablet:w-72 h-64 border overflow-hidden"
       >
-        <h1 className="text-2xl font-bold text-gray-300">{title}</h1>
-        <div className="flex items-center gap-1">
-          <a href="#" className="border p-1">
-            <FontAwesomeIcon icon={faInfoCircle} /> Details
-          </a>
-          <a href="#" className="border p-1">
-            <FontAwesomeIcon icon={faEye} /> Preview
-          </a>
+        <div className="absolute flex items-center justify-center">
+          <div className="w-20 h-fit p-2 bg-gray-700/70">
+            <img
+              src={logo}
+              alt={title}
+              className="w-full h-full object-contain"
+            />
+          </div>
         </div>
+        <img src={image} alt={title} className="w-full h-full object-cover" />
+
+        <div ref={overlayRef} className="absolute inset-0"></div>
+        <div
+          ref={contentRef}
+          className="absolute inset-0 flex flex-col gap-4 items-center justify-center text-white text-lg font-semibold bg-black/50 opacity-0"
+        >
+          <h1 className="text-2xl font-bold text-gray-300">{title}</h1>
+          <div className="flex items-center gap-1">
+            <a href="#" className="border p-1">
+              <FontAwesomeIcon icon={faInfoCircle} /> Details
+            </a>
+            <a href={url} className="border p-1">
+              <FontAwesomeIcon icon={faEye} /> Preview
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex gap-2">
+        {tags.map((tag, index) => (
+          <span key={index} className="bg-gray-700 text-white p-1 rounded">
+            {tag}
+          </span>
+        ))}
       </div>
     </div>
   );
