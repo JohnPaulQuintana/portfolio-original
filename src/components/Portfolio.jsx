@@ -49,26 +49,28 @@ const portfolioItems = [
     title: "Navigation Kiosk",
     image: "/images/kiosk.PNG",
     url: "https://exousianavi.netlify.app/",
-    tags: ["React", "Analytics"],
+    tags: ["React", "Kiosk", "Indoor Navigation"],
     logo: "/images/KIOSK-LOGO.png",
   },
 ];
 
 const Portfolio = () => {
   return (
-    <div className="bg-gray-100 p-10 px-4 tablet:px-20 laptop:px-72 desktop:px-96">
-      <h1 className="text-2xl font-bold text-gray-600 mb-5">PORTFOLIO</h1>
-      <div className="grid grid-cols-1 tablet:grid-cols-2 gap-4">
-        {portfolioItems.map((item) => (
-          <PortfolioCard
-            key={item.id}
-            title={item.title}
-            image={item.image}
-            url={item.url}
-            tags={item.tags}
-            logo={item.logo}
-          />
-        ))}
+    <div className="carbon-bg px-4 tablet:px-20 laptop:px-72 desktop:px-96">
+      <div className="bg-white w-full px-4 rounded-sm">
+        <h1 className="text-2xl font-bold animate-colorChange2 mb-2 pt-2">PORTFOLIO</h1>
+        <div className="grid grid-cols-1 tablet:grid-cols-2 gap-2">
+          {portfolioItems.map((item) => (
+            <PortfolioCard
+              key={item.id}
+              title={item.title}
+              image={item.image}
+              url={item.url}
+              tags={item.tags}
+              logo={item.logo}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -149,10 +151,10 @@ const PortfolioCard = ({ title, image, url, tags, logo }) => {
   }, []);
 
   return (
-    <div>
+    <div className="mb-4">
       <div
         ref={containerRef}
-        className="relative w-full flex items-center justify-center tablet:w-72 h-64 border overflow-hidden"
+        className="relative w-full flex items-center justify-center tablet:w-[17rem] h-64 border overflow-hidden"
       >
         <div className="absolute flex items-center justify-center">
           <div className="w-20 h-fit p-2 bg-gray-700/70">
@@ -170,7 +172,7 @@ const PortfolioCard = ({ title, image, url, tags, logo }) => {
           ref={contentRef}
           className="absolute inset-0 flex flex-col gap-4 items-center justify-center text-white text-lg font-semibold bg-black/50 opacity-0"
         >
-          <h1 className="text-2xl font-bold text-gray-300">{title}</h1>
+          <h1 className="text-2xl font-bold animate-colorChange2">{title}</h1>
           <div className="flex items-center gap-1">
             <a href="#" className="border p-1">
               <FontAwesomeIcon icon={faInfoCircle} /> Details
@@ -182,9 +184,9 @@ const PortfolioCard = ({ title, image, url, tags, logo }) => {
         </div>
       </div>
 
-      <div className="flex gap-2">
+      <div className="flex gap-2 mt-2">
         {tags.map((tag, index) => (
-          <span key={index} className="bg-gray-700 text-white p-1 rounded">
+          <span key={index} className="carbon-bg animate-colorChange2 text-sm p-1 px-2 rounded">
             {tag}
           </span>
         ))}

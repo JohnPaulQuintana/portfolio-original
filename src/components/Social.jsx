@@ -9,10 +9,10 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons"; // Email icon
 
 const Social = () => {
   return (
-    <div className="bg-gray-100 px-4 tablet:px-20 laptop:px-72 desktop:px-96">
-      <div className="social-media border">
+    <div className="carbon-bg px-4 tablet:px-20 laptop:px-72 desktop:px-96 py-2">
+      <div className="social-media bg-white py-10 rounded-sm">
         <div className="flex items-center justify-center">
-          <h1 className="text-2xl font-bold text-gray-600">DEVELOPER</h1>
+          <h1 className="text-4xl font-extrabold animate-colorChange2">DEVELOPER</h1>
         </div>
         <div className="flex gap-2 items-center justify-center space-x-4 mt-2">
           <a
@@ -62,7 +62,7 @@ const Social = () => {
         <div className="flex justify-center w-full p-2">
           <a
             href="#"
-            className="border border-gray-400 p-2 text-gray-700 font-bold"
+            className="carbon-bg p-2 animate-colorChange2 rounded-sm font-bold"
           >
             Download CV
           </a>

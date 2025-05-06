@@ -9,9 +9,9 @@ const Header = () => {
   const name = "JP QUINTANA ".split(""); // Split text into individual characters
 
   return (
-    <header className="p-4 text-white flex justify-center font-extrabold tracking-wider bg-background sticky top-0 z-20">
+    <header className="p-4 text-white flex justify-center font-extrabold tracking-wider carbon-bg sticky top-0 z-20">
       <div className="contents flex gap-2">
-      <FontAwesomeIcon icon={faPlay} size="2x" className="text-primary" />;
+      <FontAwesomeIcon icon={faPlay} size="2x" className="text-primary pe-2" />
         {name.map((char, index) => (
           <span
             key={index}
@@ -21,7 +21,7 @@ const Header = () => {
             {char}
           </span>
         ))}
-        <FontAwesomeIcon icon={faPlay} size="2x" className="text-primary rotate-180" />;
+        <FontAwesomeIcon icon={faPlay} size="2x" className="text-primary rotate-180" />
       </div>
     </header>
   );
