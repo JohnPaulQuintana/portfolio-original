@@ -57,8 +57,8 @@ const portfolioItems = [
 const Portfolio = () => {
   return (
     <div className="carbon-bg px-4 tablet:px-20 laptop:px-72 desktop:px-96">
-      <div className="bg-white w-full px-4 rounded-sm">
-        <h1 className="text-2xl font-bold animate-colorChange2 mb-2 pt-2">PORTFOLIO</h1>
+      <div className="bg-white w-full px-4 py-10 rounded-sm">
+        <h1 className="text-4xl text-center font-bold animate-colorChange2 mb-2 pt-2">PORTFOLIO</h1>
         <div className="grid grid-cols-1 tablet:grid-cols-2 gap-2">
           {portfolioItems.map((item) => (
             <PortfolioCard

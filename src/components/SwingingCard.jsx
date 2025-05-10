@@ -1,4 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+
 import gsap from "gsap";
 
 const SwingingCard = () => {
@@ -165,7 +168,7 @@ const SwingingCard = () => {
           className="absolute top-[16px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary rounded-full border-2 border-white shadow-lg z-10"
         ></div>
 
-        <svg className="absolute -top-10 left-0 w-full h-full pointer-events-none z-0">
+        <svg className="absolute -top-14 left-0 w-full h-full pointer-events-none z-0">
           <path
             ref={ropeRef}
             stroke="#4A90E2"
@@ -212,6 +215,15 @@ const SwingingCard = () => {
             </span>
           ))}
         </div>
+
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4">
+          <a href="#about-card">
+            <button type="button" className="arrow-button">
+            <FontAwesomeIcon icon={faChevronDown} className="animate-colorChange2 text-6xl" />
+          </button>
+          </a>
+        </div>
+
       </div>
     </div>
   );

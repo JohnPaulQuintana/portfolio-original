@@ -16,7 +16,7 @@ const Social = () => {
         </div>
         <div className="flex gap-2 items-center justify-center space-x-4 mt-2">
           <a
-            href="https://facebook.com/yourprofile"
+            href="https://www.facebook.com/profile.php?id=100006064309339"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -28,7 +28,7 @@ const Social = () => {
           </a>
 
           <a
-            href="https://linkedin.com/in/yourprofile"
+            href="www.linkedin.com/in/john-paul-quintana-118145287"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -39,7 +39,7 @@ const Social = () => {
             />
           </a>
 
-          <a href="mailto:your.email@example.com">
+          <a href="mailto:jpquintana2024@gmail.com">
             <FontAwesomeIcon
               icon={faEnvelope}
               size="2x"
@@ -48,7 +48,7 @@ const Social = () => {
           </a>
 
           <a
-            href="https://discord.com/invite/yourserver"
+            href="https://discord.com/invite/EXOUSIA"
             target="_blank"
             rel="noopener noreferrer"
           >

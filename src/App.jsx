@@ -9,6 +9,7 @@ import SwingingCard from "./components/SwingingCard";
 
 import Social from "./components/Social";
 import Portfolio from "./components/Portfolio";
+import About from "./components/About";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,6 +20,7 @@ function App() {
       <Header />
       <SwingingCard />
       <Social />
+      <About />
       <Portfolio />
     </div>
   );
