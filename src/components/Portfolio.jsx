@@ -42,7 +42,7 @@ const portfolioItems = [
     image: "/images/sport.PNG",
     url: "https://sport-science-app.netlify.app/",
     tags: ["React", "Analytics"],
-    logo: "/images/SF-LOGO.png",
+    logo: "/images/SS-LOGO.png",
   },
   {
     id: 4,

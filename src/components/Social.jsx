@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -8,6 +8,7 @@ import {
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"; // Email icon
 
 const Social = () => {
+   const [showModal, setShowModal] = useState(false);
   return (
     <div className="carbon-bg px-4 tablet:px-20 laptop:px-72 desktop:px-96 py-2">
       <div className="social-media bg-white py-10 rounded-sm">
@@ -59,15 +60,45 @@ const Social = () => {
             />
           </a>
         </div>
-        <div className="flex justify-center w-full p-2">
+        <div className="flex gap-2 justify-center w-full p-2">
+          <button
+            onClick={() => setShowModal(true)}
+            className="carbon-bg p-2 animate-colorChange2 rounded-sm font-bold"
+          >
+            View CV
+          </button>
           <a
-            href="#"
+            href="/cv/jpquintana.pdf"
+            download
             className="carbon-bg p-2 animate-colorChange2 rounded-sm font-bold"
           >
             Download CV
           </a>
         </div>
+
       </div>
+
+      {/* Modal */}
+        {showModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
+            <div className="bg-white w-11/12 md:w-3/4 lg:w-1/2 p-4 rounded shadow-lg relative">
+              <button
+                className="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-2xl font-bold"
+                onClick={() => setShowModal(false)}
+              >
+                &times;
+              </button>
+              <h2 className="text-xl font-bold mb-2">JOHN PAUL Y. QUINTANA</h2>
+              <iframe
+                src="/cv/jpquintana.pdf"
+                width="100%"
+                height="500px"
+                className="border"
+                title="CV PDF"
+              ></iframe>
+            </div>
+          </div>
+        )}
     </div>
   );
 };
