@@ -15,7 +15,7 @@ const ParticlePopup = () => {
   const modalContainerRef = useRef(null);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
-  const numParticles = 10;
+  const numParticles = 5;
 
   const socialLinks = {
     facebook: {
