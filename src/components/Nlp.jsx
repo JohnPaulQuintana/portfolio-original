@@ -48,7 +48,7 @@ const ParticlePopup = () => {
         - Responsive design
 
         2. Backend Development:
-        - Node.js, Express
+        - Node.js, Express, Laravel, Python, Playwright
         - REST API design
         - Database integration
 
