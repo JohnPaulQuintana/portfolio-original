@@ -56,8 +56,8 @@ const portfolioItems = [
 
 const Portfolio = () => {
   return (
-    <div className="carbon-bg px-4 tablet:px-20 laptop:px-72 desktop:px-96">
-      <div className="bg-white w-full px-4 py-10 rounded-sm">
+    <div className="carbon-bg px-4 tablet:px-20 laptop:px-72 desktop:px-96 flex justify-center">
+      <div className="bg-white w-full wide:w-[60%] px-4 py-10 rounded-sm">
         <h1 className="text-4xl text-center font-bold animate-colorChange2 mb-2 pt-2">PORTFOLIO</h1>
         <div className="grid grid-cols-1 tablet:grid-cols-2 gap-2">
           {portfolioItems.map((item) => (
@@ -154,7 +154,7 @@ const PortfolioCard = ({ title, image, url, tags, logo }) => {
     <div className="mb-4">
       <div
         ref={containerRef}
-        className="relative w-full flex items-center justify-center tablet:w-[17rem] h-64 border overflow-hidden"
+        className="relative w-full flex items-center justify-center h-64 border overflow-hidden"
       >
         <div className="absolute flex items-center justify-center">
           <div className="w-20 h-fit p-2 bg-gray-700/70">

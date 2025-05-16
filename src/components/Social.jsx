@@ -10,8 +10,8 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons"; // Email icon
 const Social = () => {
    const [showModal, setShowModal] = useState(false);
   return (
-    <div className="carbon-bg px-4 tablet:px-20 laptop:px-72 desktop:px-96 py-2">
-      <div className="social-media bg-white py-10 rounded-sm">
+    <div className="carbon-bg px-4 tablet:px-20 laptop:px-72 desktop:px-96 py-2 flex justify-center">
+      <div className="social-media w-full bg-white wide:w-[60%] py-10 rounded-sm">
         <div className="flex items-center justify-center">
           <h1 className="text-4xl font-extrabold animate-colorChange2">DEVELOPER</h1>
         </div>

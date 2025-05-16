@@ -56,3 +56,8 @@ html {
   opacity: 1;
   transform: translateY(0); /* Move element into position */
 }
+
+
+@media (min-width:1281px) {
+  
+}

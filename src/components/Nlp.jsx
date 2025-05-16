@@ -71,21 +71,42 @@ const ParticlePopup = () => {
         `,
     projects: `Here are some featured projects:
 
-        1. [E-commerce Platform](#) - WordPress/Shopify
+        1. [Motorsport Growth](https://johnpaulquintana.github.io/ui/) - WordPress/UI
         - Custom theme development
-        - Product catalog
-        - Shopping cart
-        - Payment integration
+        - Landing Page
 
-        2. [Analytics Dashboard](#) - React/Echart.js
-        - Data visualization
-        - Custom reporting
-        - Real-time updates
+        2. [S4T Stage 4 Tuning](https://pw8j8t-99.myshopify.com/) - Shopify
+        - Custom theme development
+        - Payment
+        - E-commerce
 
-        3. [API Service](#) - Node.js/Express/Laravel/Python
-        - RESTful endpoints
-        - Authentication
-        - Database integration
+        3. [BreakForm](https://c5ejq3rs2w.wpdns.site/) - Wordpress
+        - Contructions
+        - Fabrications
+        - Architectures
+
+        4. [Sofreg Solutions](https://sofreg-solution-test.netlify.app/) - Reactjs/Fullstack
+        - Company Website
+        - Services Offered
+        - Employee Attendance Monitoring
+        - Camera Access
+        - Job Listing Management
+        - Admin and Employee Dashboard
+        - Backend is on hold due to hosting expired.
+
+        5. [Sport Science](https://sport-science-app.netlify.app/) - Reactjs/Fullstack
+        - Coach and Athletes Monitoring Performance
+        - Analytics
+        - Recommendations
+        - Linear Regression Algorithm
+        - Backend is on hold due to hosting expired.
+
+        6. [On-Campus Navigational Kiosk](https://exousianavi.netlify.app/) - Reactjs/Fullstack
+        - Campus Navigation
+        - Email Notification
+        - Interractable Map
+        - Custom Map Supported
+        - Backend is on hold due to hosting expired.
 
         You can ask about:
         Available on version:1.1
@@ -99,7 +120,7 @@ const ParticlePopup = () => {
     contact: `You can connect with me through:
 
         1. [LinkedIn Profile](${socialLinks.linkedin.url}) - Professional network
-        2. [GitHub Profile](#) - Code repositories
+        2. [GitHub Profile](https://github.com/JohnPaulQuintana) - Code repositories
         3. [Email Me](${socialLinks.email.url}) - Direct contact
 
         After connecting, you might want to:
@@ -497,7 +518,7 @@ const ParticlePopup = () => {
         <button
           ref={buttonRef}
           onClick={handleOpenPopup}
-          className="fixed bottom-6 right-6 bg-white hover:bg-blue-700 text-white p-4 rounded-full shadow-lg z-50 transition-all transform hover:scale-110"
+          className="fixed bottom-6 right-6 laptop:right-80 wide:right-[25%] bg-white hover:bg-blue-700 text-white p-4 rounded-full border border-primary shadow-lg z-50 transition-all transform hover:scale-110"
           aria-label="Open Chat"
         >
           <img

@@ -11,6 +11,8 @@ import Social from "./components/Social";
 import Portfolio from "./components/Portfolio";
 import About from "./components/About";
 import ParticlePopup from "./components/Nlp";
+import Skills from "./components/Skills";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -23,6 +25,8 @@ function App() {
       <About />
       <Portfolio />
       <ParticlePopup />
+      <Skills />
+      <Footer />
     </div>
   );
 }

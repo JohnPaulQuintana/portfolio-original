@@ -2,8 +2,8 @@ import React from "react";
 
 const About = () => {
   return (
-    <div id="about-card" className="carbon-bg px-4 tablet:px-20 laptop:px-72 desktop:px-96 pb-2">
-      <div className="social-media bg-white py-10 rounded-sm">
+    <div id="about-card" className="carbon-bg px-4 tablet:px-20 laptop:px-72 desktop:px-96 pb-2 flex justify-center">
+      <div className="social-media bg-white w-full wide:w-[60%] py-10 rounded-sm">
         <div className="about-me px-4 desktop:px-10">
           <h1 className="text-4xl text-center font-bold animate-colorChange2">ABOUT ME</h1>
           <p class="text-gray-600 text-lg mb-6">

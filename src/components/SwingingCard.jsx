@@ -160,9 +160,9 @@ const SwingingCard = () => {
   return (
     <div
       ref={containerRef}
-      className="carbon-bg px-4 tablet:px-20 laptop:px-72 desktop:px-96 desktop:min-h-[80vh] relative"
+      className="carbon-bg px-4 tablet:px-20 laptop:px-72 desktop:px-96 desktop:min-h-[80dvh] relative flex justify-center"
     >
-      <div className="w-full overflow-hidden flex justify-between touch-none bg-white p-2 rounded-sm">
+      <div className="w-full wide:w-[60%] h-[80dvh] overflow-hidden flex justify-between touch-none bg-white p-2 rounded-sm">
         <div
           ref={pinRef}
           className="absolute top-[16px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary rounded-full border-2 border-white shadow-lg z-10"
@@ -180,35 +180,35 @@ const SwingingCard = () => {
 
         <div
           ref={cardRef}
-          className="absolute top-[100px] left-1/2 transform -translate-x-1/2 w-60 h-80 bg-white shadow-xl rounded-xl p-2 text-primary font-bold text-2xl border border-gray-300 cursor-pointer touch-none"
+          className="absolute top-[100px] left-1/2 transform -translate-x-1/2 w-60 wide:w-[20%] h-80 wide:h-fit bg-white shadow-xl rounded-xl p-2 text-primary font-bold text-2xl border border-gray-300 cursor-pointer touch-none"
           onMouseEnter={handleInteractionStart}
         >
           <div className="profile">
             <img src="/images/p1.JPG" className="w-full rounded-md" alt="" />
             <div className="p-4">
-              <p className="text-base text-center text-secondary">
+              <p className="text-base wide:text-xl text-center text-secondary">
                 BACHELOR OF SCIENCE AND INFORMATION TECHNOLOGY
               </p>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col wide:gap-2">
           {frontend.map((char, index) => (
             <span
               key={index}
-              className="text-6xl pe-1 font-extrabold animate-colorChange2 text-white"
+              className="text-6xl wide:text-7xl pe-1 font-extrabold animate-colorChange2 text-white"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {char}
             </span>
           ))}
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col wide:gap-3">
           {backend.map((char, index) => (
             <span
               key={index}
-              className="text-6xl pt-2 font-extrabold animate-colorChange2 text-white"
+              className="text-6xl wide:text-7xl pt-2 font-extrabold animate-colorChange2 text-white"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {char}
