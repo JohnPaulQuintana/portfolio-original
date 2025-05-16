@@ -248,12 +248,21 @@ const ParticlePopup = () => {
 
   // Typewriter effect for messages
   const typeWriter = (messageIndex, text, index, callback) => {
+    console.log(text)
     if (index < text.length) {
+      // setMessages((prev) => {
+      //   const newMessages = [...prev];
+      //   newMessages[messageIndex].text = text.substring(0, index + 1);
+      //   return newMessages;
+      // });
       setMessages((prev) => {
         const newMessages = [...prev];
-        newMessages[messageIndex].text = text.substring(0, index + 1);
+        if (newMessages[messageIndex]) {
+          newMessages[messageIndex].text = text.substring(0, index + 1);
+        }
         return newMessages;
       });
+
       setTimeout(
         () => typeWriter(messageIndex, text, index + 1, callback),
         20 + Math.random() * 20
